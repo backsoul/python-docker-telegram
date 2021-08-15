@@ -9,5 +9,5 @@ RUN pip install -r requirements.txt
 
 COPY . .
 
-CMD ["python","telebot.py"]
+CMD ["python","-u","telebot.py"]
 

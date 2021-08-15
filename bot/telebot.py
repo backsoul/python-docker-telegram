@@ -9,11 +9,8 @@ import mysql.connector
 
 load_dotenv()  # take environment variables from .env.
 def start(update, context):
-    print("Iniciaron el bot!!")
     update.message.reply_text(f'Hello {update.effective_user.first_name} :pulgar_hacia_arriba:')
-    update.message.reply_text(os.environ["DB_HOST"])
-    update.message.reply_text(os.environ["DB_USER"])
-    update.message.reply_text(os.environ["DB_PASSWORD"])
+
  
 
 def main():
