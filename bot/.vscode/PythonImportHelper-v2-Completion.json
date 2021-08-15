@@ -1,0 +1,70 @@
+[
+    {
+        "label": "Updater",
+        "importPath": "telegram.ext",
+        "description": "telegram.ext",
+        "isExtraImport": true,
+        "detail": "telegram.ext",
+        "documentation": {}
+    },
+    {
+        "label": "CommandHandler",
+        "importPath": "telegram.ext",
+        "description": "telegram.ext",
+        "isExtraImport": true,
+        "detail": "telegram.ext",
+        "documentation": {}
+    },
+    {
+        "label": "Update",
+        "importPath": "telegram",
+        "description": "telegram",
+        "isExtraImport": true,
+        "detail": "telegram",
+        "documentation": {}
+    },
+    {
+        "label": "emoji",
+        "kind": 6,
+        "isExtraImport": true,
+        "importPath": "emoji",
+        "description": "emoji",
+        "detail": "emoji",
+        "documentation": {}
+    },
+    {
+        "label": "load_dotenv",
+        "importPath": "dotenv",
+        "description": "dotenv",
+        "isExtraImport": true,
+        "detail": "dotenv",
+        "documentation": {}
+    },
+    {
+        "label": "os",
+        "kind": 6,
+        "isExtraImport": true,
+        "importPath": "os",
+        "description": "os",
+        "detail": "os",
+        "documentation": {}
+    },
+    {
+        "label": "start",
+        "kind": 2,
+        "importPath": "telebot",
+        "description": "telebot",
+        "peekOfCode": "def start(update, context):\n    update.message.reply_text(f'Hello {update.effective_user.first_name} :pulgar_hacia_arriba:')\ndef main():\n    TOKEN=os.environ[\"TOKEN\"]\n    updater=Updater(TOKEN, use_context=True)\n    dp=updater.dispatcher\n    dp.add_handler(CommandHandler('start',\tstart))\n    updater.start_polling()\n    updater.idle()\nif __name__ == '__main__':",
+        "detail": "telebot",
+        "documentation": {}
+    },
+    {
+        "label": "main",
+        "kind": 2,
+        "importPath": "telebot",
+        "description": "telebot",
+        "peekOfCode": "def main():\n    TOKEN=os.environ[\"TOKEN\"]\n    updater=Updater(TOKEN, use_context=True)\n    dp=updater.dispatcher\n    dp.add_handler(CommandHandler('start',\tstart))\n    updater.start_polling()\n    updater.idle()\nif __name__ == '__main__':\n    main()",
+        "detail": "telebot",
+        "documentation": {}
+    }
+]
