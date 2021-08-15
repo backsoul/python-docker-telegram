@@ -26,6 +26,28 @@ services:
     restart: on-failure
     networks:
       - python-db
+  
+  web:
+    build:
+      context: ./flask
+    container_name: flask-web
+    ports:
+      - "5000:5000"
+    volumes:
+      - ./:/code
+    depends_on:
+      - redis
+    networks:
+      - python-db
+      - redis-net
+
+  redis:
+      container_name: redis
+      image: redis
+      networks:
+        - redis-net
+
 networks:
   python-db: 
     external: true
+  redis-net:

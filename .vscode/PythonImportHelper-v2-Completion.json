@@ -59,6 +59,22 @@
         "documentation": {}
     },
     {
+        "label": "Flask",
+        "importPath": "flask",
+        "description": "flask",
+        "isExtraImport": true,
+        "detail": "flask",
+        "documentation": {}
+    },
+    {
+        "label": "Redis",
+        "importPath": "redis",
+        "description": "redis",
+        "isExtraImport": true,
+        "detail": "redis",
+        "documentation": {}
+    },
+    {
         "label": "obj",
         "kind": 5,
         "importPath": "bot.practice",
@@ -83,6 +99,33 @@
         "description": "bot.telebot",
         "peekOfCode": "def main():\n    TOKEN=os.environ[\"TOKEN\"]\n    updater=Updater(TOKEN, use_context=True)\n    dp=updater.dispatcher\n    dp.add_handler(CommandHandler('start',\tstart))\n    updater.start_polling()\n    updater.idle()\nif __name__ == '__main__':\n    # mydb = mysql.connector.connect(\n    # host=os.environ[\"DB_HOST\"],",
         "detail": "bot.telebot",
+        "documentation": {}
+    },
+    {
+        "label": "hello",
+        "kind": 2,
+        "importPath": "flask.app",
+        "description": "flask.app",
+        "peekOfCode": "def hello():\n    redis.incr('hits')\n    return 'This Compose/Flask demo has been viewed %s time(s).' % redis.get('hits')\nif __name__ == \"__main__\":\n    app.run(host=\"0.0.0.0\",debug=True)",
+        "detail": "flask.app",
+        "documentation": {}
+    },
+    {
+        "label": "app",
+        "kind": 5,
+        "importPath": "flask.app",
+        "description": "flask.app",
+        "peekOfCode": "app = Flask(__name__)\nredis = Redis(host='redis', port=6379)\n@app.route('/')\ndef hello():\n    redis.incr('hits')\n    return 'This Compose/Flask demo has been viewed %s time(s).' % redis.get('hits')\nif __name__ == \"__main__\":\n    app.run(host=\"0.0.0.0\",debug=True)",
+        "detail": "flask.app",
+        "documentation": {}
+    },
+    {
+        "label": "redis",
+        "kind": 5,
+        "importPath": "flask.app",
+        "description": "flask.app",
+        "peekOfCode": "redis = Redis(host='redis', port=6379)\n@app.route('/')\ndef hello():\n    redis.incr('hits')\n    return 'This Compose/Flask demo has been viewed %s time(s).' % redis.get('hits')\nif __name__ == \"__main__\":\n    app.run(host=\"0.0.0.0\",debug=True)",
+        "detail": "flask.app",
         "documentation": {}
     }
 ]
