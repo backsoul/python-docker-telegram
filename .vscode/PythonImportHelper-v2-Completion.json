@@ -50,11 +50,20 @@
         "documentation": {}
     },
     {
+        "label": "mysql.connector",
+        "kind": 6,
+        "isExtraImport": true,
+        "importPath": "mysql.connector",
+        "description": "mysql.connector",
+        "detail": "mysql.connector",
+        "documentation": {}
+    },
+    {
         "label": "start",
         "kind": 2,
         "importPath": "bot.telebot",
         "description": "bot.telebot",
-        "peekOfCode": "def start(update, context):\n    update.message.reply_text(f'Hello {update.effective_user.first_name} :pulgar_hacia_arriba:')\ndef main():\n    TOKEN=os.environ[\"TOKEN\"]\n    updater=Updater(TOKEN, use_context=True)\n    dp=updater.dispatcher\n    dp.add_handler(CommandHandler('start',\tstart))\n    updater.start_polling()\n    updater.idle()\nif __name__ == '__main__':",
+        "peekOfCode": "def start(update, context):\n    print(\"Iniciaron el bot!!\")\n    update.message.reply_text(f'Hello {update.effective_user.first_name} :pulgar_hacia_arriba:')\n    update.message.reply_text(os.environ[\"DB_HOST\"])\n    update.message.reply_text(os.environ[\"DB_USER\"])\n    update.message.reply_text(os.environ[\"DB_PASSWORD\"])\ndef main():\n    TOKEN=os.environ[\"TOKEN\"]\n    updater=Updater(TOKEN, use_context=True)\n    dp=updater.dispatcher",
         "detail": "bot.telebot",
         "documentation": {}
     },
@@ -63,7 +72,7 @@
         "kind": 2,
         "importPath": "bot.telebot",
         "description": "bot.telebot",
-        "peekOfCode": "def main():\n    TOKEN=os.environ[\"TOKEN\"]\n    updater=Updater(TOKEN, use_context=True)\n    dp=updater.dispatcher\n    dp.add_handler(CommandHandler('start',\tstart))\n    updater.start_polling()\n    updater.idle()\nif __name__ == '__main__':\n    main()",
+        "peekOfCode": "def main():\n    TOKEN=os.environ[\"TOKEN\"]\n    updater=Updater(TOKEN, use_context=True)\n    dp=updater.dispatcher\n    dp.add_handler(CommandHandler('start',\tstart))\n    updater.start_polling()\n    updater.idle()\nif __name__ == '__main__':\n    # mydb = mysql.connector.connect(\n    # host=os.environ[\"DB_HOST\"],",
         "detail": "bot.telebot",
         "documentation": {}
     }
